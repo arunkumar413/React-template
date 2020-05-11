@@ -1,6 +1,17 @@
-### A simple app based on create-react-app to reduce the setup time and to focus on the business logic. 
+## A simple app based on create-react-app to reduce the setup time and to focus on the business logic. 
 
-Reactjs + MaterialUI + customizable theme file + Central store using contextAPI + React Router+ firebase Authentication. All juiced up. 
+### Reactjs + MaterialUI (includes a customizable theme file) + Centralized store using contextAPI + React Router + firebase Authentication. All juiced up. 
+
+
+### Important files:
+
+1) StoreContext.js ( centralised store)
+
+2) Firebase.js (firebase config)
+
+3) AppRouter.js (React router config)
+
+4) Theme.js (Material UI theme config)
 
 ## Available Scripts
 

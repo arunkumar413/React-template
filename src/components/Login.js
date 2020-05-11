@@ -33,12 +33,17 @@ export default function Login() {
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
     const [userInfo, setUserInfo] = useState({})
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [firebaseError, setFirebaseError] = useState('')
-    const [providers, setProviders]= useState({google:googleProvider, facebook: facebookProvider})
+    const [providers, setProviders] = useState({ google: googleProvider, facebook: facebookProvider })
 
     const appStore = useContext(storeContext);
 
+
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(user => {
+            appStore.dispatch({ type: 'setuser', payload: user })
+        });
+    },[])
 
 
     const handleEmailChange = (event) => {
@@ -61,10 +66,8 @@ export default function Login() {
             var token = result.credential.accessToken;
             // The signed-in user info.
             // var user = result.user;
-            setIsLoggedIn(true)
-            setUserInfo(result.user)
-            appStore.dispatch({type:'setuser', payload: result.user})
-            appStore.dispatch({type:'setIsLoggedIn', payload:true})
+            appStore.dispatch({ type: 'setuser', payload: result.user })
+            appStore.dispatch({ type: 'setIsLoggedIn'})
 
 
 

@@ -26,8 +26,6 @@ export default function Counter (props) {
     <div>
       <Button variant ='contained' color='primary' onClick={increment}> Increment</Button>
       <Button variant ='contained' color='secondary' onClick={decrement}> Decrement</Button>
-      <Button variant ='contained' color='secondary' onClick={setUser}> set user</Button>
-
 
       <DisplayCounter/>
     </div>

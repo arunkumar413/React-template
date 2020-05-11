@@ -102,7 +102,7 @@ export default function AppNavBar() {
 
   const signout = () => {
     Auth.signOut();
-    appStore.dispatch({ type: 'setIsLoggedIn', payload: false })
+    appStore.dispatch({ type: 'setIsLoggedIn',})
 
   }
 
@@ -140,7 +140,7 @@ export default function AppNavBar() {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      {appStore.store.isLoggedIn ? <MenuItem onClick={signout}> Logout </MenuItem> : <MenuItem onClick={() => BrowserHistory.push('/login')}> Login </MenuItem>}
+      {appStore.store.userDetails ? <MenuItem onClick={signout}> Logout </MenuItem> : <MenuItem onClick={() => BrowserHistory.push('/login')}> Login </MenuItem>}
     </Menu>
   );
 
@@ -197,9 +197,9 @@ export default function AppNavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
-          </Typography>
+          <Button variant="contained" color="primary" disableElevation onClick={() => BrowserHistory.push('/')} >
+            Home
+          </Button>
           <Button variant="contained" color="primary" disableElevation onClick={() => BrowserHistory.push('/contact')} >
             Contact
           </Button>
@@ -240,7 +240,7 @@ export default function AppNavBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <Avatar alt="Remy Sharp" src={appStore.store.userDetails.photoURL} />
+              <Avatar alt="Remy Sharp" src={appStore.store.userDetails? appStore.store.userDetails.photoURL: ''} />
 
             </IconButton>
           </div>

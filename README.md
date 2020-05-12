@@ -13,6 +13,38 @@
 
 4) Theme.js (Material UI theme config)
 
+
+### Directory structure
+
+```
+├── App.css
+├── App.js
+├── App.test.js
+├── assets
+│   └── Theme.js  (Customizable material UI theme file)
+├── components
+│   ├── AppRouter.js  (Configure the app routes )
+│   ├── Counter.js 
+│   ├── DisplayCounter.js
+│   ├── Firebase.js  (Firebase configuration)
+│   ├── Login.js   (Firebase login component)
+│   ├── NavBar.js  (App navigation bar)
+│   ├── Register.js  (Firebase register component)
+│   └── StoreContext.js
+├── index.css
+├── index.js
+├── logo.svg
+├── pages  
+│   ├── About.js
+│   ├── Contact.js
+│   ├── Home.js
+│   ├── LoginPage.js
+│   ├── RegisterPage.js
+│   └── TestPage.js
+├── serviceWorker.js
+└── setupTests.js
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

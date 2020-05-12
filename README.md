@@ -2,6 +2,7 @@
 
 ### Reactjs + MaterialUI (includes a customizable theme file) + Centralized store using contextAPI + React Router + firebase Authentication. All juiced up. 
 
+### Demo link: https://csb-5wifd.netlify.app/
 
 ### Important files:
 
@@ -30,7 +31,7 @@
 │   ├── Login.js   (Firebase login component)
 │   ├── NavBar.js  (App navigation bar)
 │   ├── Register.js  (Firebase register component)
-│   └── StoreContext.js
+│   └── StoreContext.js  ( Centralised store ) 
 ├── index.css
 ├── index.js
 ├── logo.svg
@@ -44,6 +45,36 @@
 ├── serviceWorker.js
 └── setupTests.js
 ```
+
+## Installation
+
+
+1) Clone this repo
+
+2) `cd to the project root directory `
+
+ 3) Run `npm install ` to install the dependencies
+
+ 4) Edit Firebase.js file and include your firebase project config
+
+```
+
+ const firebaseConfig = {
+        apiKey: "AIzaSyDRhWmt22wpSDu47T1Xfdsfdc0s252b1ci0",
+        authDomain: "reacttemplate-56g726a.firebaseapp.com",
+        databaseURL: "https://reacttemplate-6g726a.firebaseio.com",
+        projectId: "reacttemplate-6g726a",
+        storageBucket: "reacttemplate-6g726a.appspot.com",
+        messagingSenderId: "56546564565",
+        appId: "1:564565656:web:f0383006fb036fae242603",
+        measurementId: "G-E1X2P3DKNB"
+};
+
+```
+
+ 5) Run `npm start`
+
+
 
 ## Available Scripts
 
